@@ -9,7 +9,6 @@
 </head>
 <body>
 
-
 <!-- GLAVA -->
 <glava>
 	<table style="width: 100%;">
@@ -21,7 +20,7 @@
 			<td style="width: calc(100% - 20px);">
 				<span id="barve"></span> 
 				<input id="novaBarva" type="button" value="Dodaj barvo" class="rob senca" />
-				<input id="odstraniBarve" type="button" value="Odstrani barve" class="rob senca" />
+				<input id="odstraniBarve" type="button" value="Odstrani barve" class="rob senca" onclick="obdelajKlik()" />
 			</td>
 			<td rowspan="2" style="width: 300px;">
 				<button id="start" class="rob senca">Zaženi stroboskop</button>
@@ -39,6 +38,15 @@
 		</tr>
 	</table>
 </glava>
+
+<script>
+	
+	var obdelajKlik = function(dogodek) {
+      var odstrani = document.getElementById("barve");
+      odstrani.innerHTML = "";
+    }
+    
+</script>
 
 <!-- TELO -->
 <telo id="stroboskop" class="rob senca"></telo>
